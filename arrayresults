@@ -1,0 +1,25 @@
+Results for extraLargeArray
+Insert 650.7644 ms
+Append 2.4834 ms
+
+tinyArray
+Insert 31.1 μs (micro-seconds)
+Append 65 μs
+
+smallArray
+Insert 47.9 μs
+Append 75.5 μs
+
+mediumArray
+Insert 151.7 μs
+Append 107.4 μs
+
+largeArray
+Insert 6.6151 ms
+Append 437.1 μs
+
+
+From looking at the insert and append results, the pattern I am noticing is based on the size of the array. For example the smaller arrays insert was quicker. However, as the size of the array would increase the time gap would decrease. And at the mediumArray we notice that Append is now quicker and stays down that flow till the extraLargeArray. So, it depends on the scenario however .push() seems to be the more viable option when taking time and other factors into consideration. Because .push() is more constant than linear. 
+
+Extra Credit:
+The reason .unshift() is slower than .push() is because unshift also needs to unshift all the elements to the left once the first element is added. Making for regardless of array size an extra step, but as it the array size eats up a lot of time.
